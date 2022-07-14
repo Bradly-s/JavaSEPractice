@@ -1,4 +1,4 @@
-package Stream;
+package stream;
 
 import aggregate.AggregateOperation;
 
