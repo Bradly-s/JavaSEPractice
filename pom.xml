@@ -21,12 +21,19 @@
         </plugins>
     </build>
 
-    <!--    导入mysql的驱动jar包-->
     <dependencies>
+        <!--    导入mysql的驱动jar包-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.31</version>
+        </dependency>
+
+        <!--    导入数据库连接池包-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.2.3</version>
         </dependency>
     </dependencies>
 
