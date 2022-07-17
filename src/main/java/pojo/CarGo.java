@@ -1,9 +1,11 @@
 package pojo;
 
+import java.io.Serializable;
+
 /**
  * 货物类
  * */
-public class CarGo {
+public class CarGo implements Serializable {
     // id 主键
     private Integer id;
     // 名称
