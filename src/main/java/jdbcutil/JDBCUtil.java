@@ -118,31 +118,33 @@ public class JDBCUtil {
         String location = "货架2";
         String introduction = "新鲜的大白菜";
 
-//                增加
-        String sqlAdd = "insert into cargo (name, location, introduction) values(?,?,?);";
-        boolean add = update(sqlAdd, name, location, introduction);
+////                增加
+//        String sqlAdd = "insert into cargo (name, location, introduction) values(?,?,?);";
+//        boolean add = update(sqlAdd, name, location, introduction);
 
-//        删除
+////        删除
 //        String sqlDel = "delete from cargo where name = ? and location = ? ";
 //        boolean del = update(sqlDel, name, location);
 
-//        修改
-        String sqlUpdate = "update cargo set introduction = ? where name = ? and location = ? ";
-        boolean update = update(sqlUpdate, "哈哈哈哈", name, location);
-
-
-        //        通用单条查询
-        String sql = "select * from cargo where id = ? and standard = ?";
-        List<Map<String, Object>> list = listObjects(sql, 46, "111");
+////        修改
+//        String sqlUpdate = "update cargo set introduction = ? where name = ? and location = ? ";
+//        boolean update = update(sqlUpdate, "哈哈哈哈", name, location);
+//
+//
+//        //        通用单条查询
+        String sql = "select * from cargo where id = ? ";
+        List<Map<String, Object>> list = listObjects(sql, 46);
         System.out.println("list:" + list);
+//
+//////        通用多条查询
+//        String sqlQuery = "select * from cargo ";
+//        List<Map<String, Object>> listObjects = listObjects(sqlQuery);
+//        System.out.println("list.size():" + listObjects.size());
+//        for (int i = 0; i < listObjects.size(); i++){
+//            System.out.println("list.get(" + i + "):" + listObjects.get(i));
+//        }
 
-////        通用多条查询
-        String sqlQuery = "select * from cargo";
-        List<Map<String, Object>> listObjects = listObjects(sqlQuery);
-        System.out.println("list.size():" + listObjects.size());
-        for (int i = 0; i < listObjects.size(); i++){
-            System.out.println("list.get(" + i + "):" + listObjects.get(i));
-        }
+//        todo 事务管理（捕获到异常（如除0操作）要回滚）、批量删除（idea中用in）、批量增加
 
     }
 
